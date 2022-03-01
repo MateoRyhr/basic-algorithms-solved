@@ -21,14 +21,24 @@ class Result
     If it is possible, return YES, otherwise return NO.*/
     public static string kangaroo(int x1, int v1, int x2, int v2)
     {
-        //this pass all test
-
+        //my last solution - this pass all test - it's not the best solution
         while(x1 < 999999999 && x2 < 999999999){
             x1 += v1;
             x2 += v2;
             if(x1 == x2) return "YES";
         }
         return "NO";
+
+        /*
+        //Solution by https://www.youtube.com/watch?v=52R2pLDjUBw --> he explain the best solution
+        
+            var remainder = (x2-x1)%(v1-v2);
+            if(v1 > v2){
+                return remainder == 0 ? "YES" : "NO"; 
+            }else{
+                return "NO";
+            }
+        */
 
         /*
         second solution - this solution does not pass all tests
