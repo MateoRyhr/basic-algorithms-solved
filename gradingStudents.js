@@ -1,10 +1,10 @@
 // Problem: https://www.hackerrank.com/challenges/grading/problem
 
-const notas = [84,39,20,82,71,93]
+const notas = [4,73,67,38,33]
 
 function gradingStudents(grades){
     let gradesRounding = grades.map(g => {
-        if(g < 40){
+        if(g < 38){
             return g
         }else if(g % 5 === 3){
             return g+2
